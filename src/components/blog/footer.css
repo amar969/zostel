@@ -1,0 +1,51 @@
+.back {
+    background-color: #2D3748;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: black;
+  }
+  .mainContainer
+  {
+    width: 100%;
+    background-color: rgb(217,224,224);
+    color: black;
+    padding: 20px 0px;
+  }
+  .content{
+    width: 90%;
+    /* margin: auto; */
+    display:grid;
+    grid-template-columns: 60% 20% 20%;
+    grid-gap: 5%;
+  }
+  .footHeading{
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .socialIcon{
+    display: flex;
+    column-gap: 6%;
+  }
+  .firstColumn{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    margin: 6px !important;
+    color: white;
+  }
+  .nameInp{
+    display: flex;
+    column-gap: 3%;
+  }
+  .secColumn{
+    display: grid;
+    grid-gap: 10%;
+  }
+  .copyRight{
+    margin-top: 10%;
+    font-size: 14px;
+  }
