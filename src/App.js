@@ -1,8 +1,8 @@
 import './App.css';
-import { Destination } from './Components/Destination';
+import { Destination } from './components/Destination';
 import {useParams} from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
-import {Tour} from "./Components/Tour";
+import {Tour} from "./components/Tour";
 
 function App() {
 
