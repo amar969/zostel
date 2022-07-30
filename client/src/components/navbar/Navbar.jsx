@@ -1,7 +1,6 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
@@ -20,7 +19,7 @@ import ZoWorld from '../zoWorld/ZoWorld'
 
 export default function Navbar() {
   return (
-    <Router>
+    
       <div>
        <div className="navbarContainer">
             <div className="leftNavbar">
@@ -61,37 +60,19 @@ export default function Navbar() {
        </div>
 
         <hr />
-        <Switch>
-          <Route exact path="/">
-            <Destinations />
-          </Route>
-          <Route path="/zostel">
-            <Zostel />
-          </Route>
-          <Route path="/zostelHomes">
-            <ZostelHomes />
-          </Route>
-          <Route path="/zostelPlus">
-            <ZostelPlus />
-          </Route>
-          <Route path="/longstays">
-            <Longstays />
-          </Route>
-          <Route path="/franchise">
-            <Franchise />
-          </Route>
-          <Route path="/joinUs">
-            <JoinUs />
-          </Route>
-          <Route path="/blog">
-            <Blog />
-          </Route>
-          <Route path="/zoWorld">
-            <ZoWorld />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route exact path="/" element={<Destinations />} />
+          <Route path="/zostel" element={<Zostel />} />
+          <Route path="/zostelHomes" element={ <ZostelHomes /> } />
+          <Route path="/zostelPlus" element={<ZostelPlus />} />
+          <Route path="/longstays" element={<Longstays />} />
+          <Route path="/franchise" element={<Franchise />} />
+          <Route path="/joinUs" element={<JoinUs />} />
+          <Route path="/blog" element={<Blog /> } />
+          <Route path="/zoWorld" element={<ZoWorld />} />
+          </Routes>
       </div>
-    </Router>
+  
   );
 }
 
