@@ -1,0 +1,43 @@
+.navbarContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 10px;
+}
+
+.leftNavbar{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    justify-content: center;
+}
+.leftNavbar img{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+
+.rightNavbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
+    text-decoration: none;
+    color: #0A181D;
+}
+.rightNavbar > button{
+  background-color: white;
+  border: 1px solid #f15824;
+  border-radius: 10px;
+  padding: 0px 20px;
+}
+.rightNavbar > li{
+    list-style: none;
+    font-size: 20px;
+    margin-top: 15px;
+   }
+
+.rightNavbar li.active a{
+  color: #f15824;
+   }
