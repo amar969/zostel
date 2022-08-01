@@ -24,9 +24,6 @@ export const Destination = () => {
     }
   };
 
- 
-  
-
   React.useEffect(() => {
     fetchTour()
   }, [])
@@ -54,7 +51,6 @@ export const Destination = () => {
                 <GridItem w="100%" h="300" pos="relative" onClick={() => navigate(`/Tour/${item.slug}`)}>
                         <Text fontSize='2xl' fontWeight="bold" color="white" pos="absolute" bottom="2" p={4}>{item.name}</Text>
                         <img src={item.images[0].image} style={{ width:"100%", height:"100%", borderRadius:"10px" }} alt="" />
-                        
                 </GridItem>
                 </Link>
                 </>

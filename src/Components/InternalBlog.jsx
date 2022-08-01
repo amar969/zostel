@@ -19,7 +19,7 @@ export const InternalBlog = () => {
 
     return (
    <>
-   <Box sx={{ display:"flex", flexDirection:"column", backgroundColor:"grey", justifyContent:"center", alignItems:"center", padding:"50px", marginTop:"100px" }} >
+   <Box sx={{ display:"flex", flexDirection:"column", backgroundColor:"#e2e8f0  ", justifyContent:"center", alignItems:"center", padding:"50px", marginTop:"100px" }} >
    <Text fontSize="4xl" fontWeight="bold">Latest Reads</Text>
    <Box  sx={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)" }}>
    <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' sx={{ backgroundColor:"white" }}>

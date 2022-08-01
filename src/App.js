@@ -12,6 +12,8 @@ import {Blog} from './Components/Blog'
 import {ZoWorld} from './Components/ZoWorld'
 import {Footer} from './Components/Footer/Footer';
 import {Navbar} from "./Components/Navbar/Navbar";
+import { Hotel } from './Components/Hotel/Hotel';
+import { Booking } from './Components/Hotel/Booking';
 
 function App() {
 
@@ -31,6 +33,8 @@ function App() {
           <Route path="/joinUs" element={<JoinUS />} />
           <Route path="/blog" element={<Blog /> } />
           <Route path="/zoWorld" element={<ZoWorld />} />
+          <Route path='/hotel/:id' element={<Hotel /> } /> 
+          <Route path="/booking" element={<Booking /> } />
         <Route />
       </Routes>
       <Footer /> 
