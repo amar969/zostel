@@ -28,9 +28,6 @@ export const Hotel = () => {
     "Towels on rent",
   ];
 
-  
-
-  
 
   return (
     <>
@@ -106,13 +103,12 @@ export const Hotel = () => {
             endless Food scene for the foodies! Take a walk at Siddarth Garden
             while the sun sets and you will realise you have found a place you
             will never want to leave. Come and stay at our cosy hostel and
-            experience Aurangabad like a local!{" "}
+            experience Aurangabad like a local!
           </Text>
         </Box>
 
         <Box sx={{ width: "50%" }}>
           <Text fontSize="3xl" textAlign="left" fontWeight="bold">
-            {" "}
             Amenities
           </Text>
           <Box

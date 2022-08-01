@@ -34,7 +34,7 @@ body{
       flex-direction: column;
       color: #fff;
       font-size: 20px;
-      align-items: center;
+      align-items: left;
       text-align: left;
     }
     .firstCols > div{

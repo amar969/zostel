@@ -12,9 +12,8 @@ export const Footer = () => {
       <div className="mainContainer">
         <div className="content">
           <div className="firstCols">
-            <div>
-                <img src={logo} alt="pic" />
-                
+            <div >
+                <img src="https://zostel-clone-kerrybli.vercel.app/static/media/zostel-logo.4a723159.svg" style={{ width: "200px" }} alt="pic" />
             </div>
             <p>
             The website ends here, but your journey to the remotest destinations in India and Nepal begins with Zostel. Explore with our social hostels, homestays, and luxury stays on your next holiday.

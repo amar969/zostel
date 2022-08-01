@@ -8,9 +8,12 @@ import {
   FormHelperText,
   FormErrorMessage,
   Select,
-  Textarea
+  Textarea,
+  Button
 } from "@chakra-ui/react";
 import { ArrowBackIcon } from "@chakra-ui/icons";
+import { Billing } from "./Billing";
+import { useNavigate } from "react-router";
 
 export const Booking = () => {
   const [input, setInput] = React.useState("");
@@ -18,6 +21,8 @@ export const Booking = () => {
   const [contact, setContact]  = React.useState(0)
   const [add, setAdd] = React.useState("")
   const [gender, setGender] = React.useState("Male")
+
+  let navigate = useNavigate()
 
   const handleName = (e) => {
       setName(e.target.value)
@@ -39,6 +44,31 @@ export const Booking = () => {
   const handleInputChange = (e) => setInput(e.target.value);
 
   
+  
+  const postData = async() => {
+
+    const payload = {
+        "name": name,
+        "number" : contact, 
+        "add": add,  
+        "gender":gender,
+        "email" : input
+      }
+
+      let res = await fetch("http://localhost:8888/api/v1/zostel", {
+          method:"POST", 
+          body: JSON.stringify(payload),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+      })
+      let data = await res.json()
+      console.log(data)
+  }
+
+  React.useEffect(() => {
+      postData()
+  }, [])
 
   return (
     <>
@@ -54,8 +84,7 @@ export const Booking = () => {
           <Text textAlign="left" fontSize="4xl"> <ArrowBackIcon/> Confirm your Booking </Text>
           
           <Box >
-            {/* Email */}
-            <FormControl>
+            <FormControl onSubmit={() => postData()} >
               {/* name */}
               <FormLabel marginTop="10px" >Name</FormLabel>
               <Input sx={{ border:"2px solid" }}  placeholder='Enter your Full Name' type="text" value={name} onChange={(e) => {handleName(e)}}/>
@@ -80,7 +109,9 @@ export const Booking = () => {
             </FormControl>
           </Box>
         </Box>
-        <Box sx={{ width: "50%" }}>Hello again</Box>
+        <Box sx={{ width: "50%" }}>
+            <Button >Reserve</Button>
+        </Box>
       </Box>
     </>
   );

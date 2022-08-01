@@ -1,14 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../assets/logo.png";
+import { useNavigate } from "react-router";
 
 export const Navbar = () => {
+
+  let navigate = useNavigate()
+
+
   return (
     <div>
-      <div className="navbarContainer" >
-        <div className="leftNavbar">
-          <img src={logo} alt="pic" />
+      <div className="navbarContainer"  >
+        <div className="leftNavbar" onClick={() => navigate("/zostelHome")} >
+          <img src="https://zostel-clone-kerrybli.vercel.app/static/media/zostel-logo.4a723159.svg" style={{ width: "200px" }} alt="pic" />
         </div>
         <ul className="rightNavbar">
           <li>
@@ -45,7 +49,7 @@ export const Navbar = () => {
                 fontWeight: "bold",
                 fontSize: "18px",
               }}
-              to="/zostelHomes"
+              to="/zostelHome"
             >
               Zostel Homes
             </Link>

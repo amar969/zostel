@@ -165,7 +165,7 @@ export const Tour = () => {
               }}
               onClick={() => navigate(`/hotel/${data.slug}`)}
             >
-              View{" "}
+               View  <ArrowForwardIcon />
             </Button>
           </Box>
         </Box>

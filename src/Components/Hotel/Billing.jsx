@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Text } from "@chakra-ui/react";
 import { useNavigate} from "react-router-dom"; 
+import { Booking } from './Booking';
 
 export const Billing = (props) => {
 
@@ -51,7 +52,9 @@ export const Billing = (props) => {
                     sx={{ marginTop:"20px" }}
                     
                   >
-                   <Text fontWeight="bold" onClick={() => navigate("/booking")} >Book Now</Text> 
+                    <a href="https://zostel-clone-kerrybli.vercel.app/booking-info">
+                    <Text fontWeight="bold"  >Book Now</Text>  
+                    </a>
                   </Box>
           </Box>
         </>

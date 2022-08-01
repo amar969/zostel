@@ -159,6 +159,7 @@ export const HotelCard = () => {
                     borderRadius="md"
                     bg="tomato"
                     color="white"
+                    textAlign="center"
                     px={4}
                     h={8}
                     onClick={() => handleClick()}
@@ -167,7 +168,7 @@ export const HotelCard = () => {
                       <>
                         <p>
                           <span
-                            style={{ padding: "5px" }}
+                            style={{ padding: "5px",  textAlign:"center" }}
                             onClick={() => handleIncrement()}
                           >
                             +
@@ -177,12 +178,13 @@ export const HotelCard = () => {
                               backgroundColor: "white",
                               color: "black",
                               padding: "10px",
+                              textAlign:"center"
                             }}
                           >
                             {count}
                           </span>
                           <span
-                            style={{ padding: "5px" }}
+                            style={{ padding: "5px",  textAlign:"center" }}
                             onClick={() => handleDecrement()}
                           >
                             -
